@@ -10,7 +10,7 @@ const axiosInstance = axios.create({
   },
 })
 
-// Add a request interceptor to add token from Zustand state khgjbkj
+// Add a request interceptor to add token from Zustand state kh
 axiosInstance.interceptors.request.use(
   (config) => {
     const token = useAuthStore.getState().token // Retrieve token from Zustand
