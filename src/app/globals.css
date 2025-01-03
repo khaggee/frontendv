@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --background2: #ffffff;
+  --foreground: hsl(240 10% 3.9%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(240 10% 3.9%);
+  --primary: hsl(240 5.9% 10%);
+  --primary-foreground: hsl(0 0% 98%);
+  --secondary: hsl(240 4.8% 95.9%);
+  --secondary2: hsl(0, 0%, 91%);
+  --muted: hsl(240 4.8% 95.9%);
+  --accent: hsl(240 4.8% 95.9%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(0, 0%, 51%);
+  --input: hsl(240 5.9% 90%);
+  --ring: hsl(0, 0%, 83%);
+  --radius: 12px;
+  --button: #1a5fff;
+  --button2: #e5e5e5;
+  --link: #1a5fff;
+  --link2: #7ea6ff;
+  --danger: #ff4d4f;
+  --accept: #70c546;
+}
+.dark {
+  --background: #121212;
+  --background2: #171923;
+  --foreground: #fafafa;
+  --card: hsl(240 10% 3.9%);
+  --card-foreground: hsl(0 0% 98%);
+  --primary: hsl(0 0% 98%);
+  --primary-foreground: hsl(240 5.9% 10%);
+  --secondary: hsl(240, 2%, 13%);
+  --secondary2: hsl(240, 2%, 18%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --muted: hsl(240 3.7% 15.9%);
+  --accent: hsl(240, 100%, 59%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --border: hsl(0, 0%, 28%);
+  --destructive-foreground: hsl(0 0% 98%);
+  /* --border: hsl(0, 0%, 100%); */
+  --input: hsl(240 3.7% 15.9%);
+  --ring: hsl(240 4.9% 83.9%);
+  --button: #1a5fff;
+  --button2: #212121;
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 14px;
+}
+
+/* commons */
+
+.small {
+  font-size: 12px;
+}
+
+.medium {
+  font-size: 14px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background: var(--button);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  /* cursor: pointer; */
+  @apply transition-all hover:opacity-80;
+}
+
+.input {
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  outline: none;
+  font-size: 14px;
+
+  @apply transition-all focus:ring focus:ring-blue-500;
+}
+
+.theme-toggle {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.theme-toggle-container {
+  width: 4rem;
+  height: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.theme-toggle-slider {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--primary-foreground);
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
